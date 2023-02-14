@@ -3,7 +3,7 @@ import './index.css'
 
 class Card extends Component {
   state = {
-    count: 42,
+    count: 0,
   }
 
   onclickDecrement = () => {
@@ -11,7 +11,7 @@ class Card extends Component {
   }
 
   onclickIncrement = () => {
-    this.setState(prev => ({count: prev.count * 3}))
+    this.setState(prev => ({count: prev.count + 3}))
   }
 
   render() {
