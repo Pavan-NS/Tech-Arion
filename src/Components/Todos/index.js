@@ -17,7 +17,7 @@ class Todos extends Component {
     const response = await fetch(url, options)
     const dataApi = await response.json()
     console.log(dataApi)
-    const newData = dataApi.map(each => ({
+    const newData = dataApi.data.map(each => ({
       id: each.id,
       dueOn: each.due_on,
       status: each.status,
